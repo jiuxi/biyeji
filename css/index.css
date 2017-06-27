@@ -24,8 +24,6 @@
 }
 
 .slide1_1 {
-    width: 100%;
-    height: 100%;
     position: absolute;
     left: .35rem;
     top: .35rem;
@@ -55,6 +53,7 @@
     background: url("../images/slide1_3.png") no-repeat;
     background-size: 100% 100%;
 }
+
 .slide1_4 {
     width: 100%;
     height: 100%;
@@ -63,6 +62,7 @@
     background: url("../images/slide1_4.png") no-repeat;
     background-size: 100% 100%;
 }
+
 .slide1_5 {
     width: 100%;
     height: 100%;
@@ -71,6 +71,7 @@
     background: url("../images/slide1_5.png") no-repeat;
     background-size: 100% 100%;
 }
+
 .slide1_6 {
     width: 100%;
     height: 100%;
@@ -79,10 +80,12 @@
     background: url("../images/slide1_6.png") no-repeat;
     background-size: 100% 100%;
 }
+
 .slide2 {
     background: url("../images/slide_bj2.jpg") no-repeat;
     background-size: 100% 100%;
 }
+
 .slide2_1 {
     width: 100%;
     height: 100%;
@@ -91,6 +94,7 @@
     background: url("../images/slide2_1.png") no-repeat;
     background-size: 100% 100%;
 }
+
 .slide2_2 {
     width: 100%;
     height: 100%;
@@ -100,9 +104,145 @@
     background-size: 100% 100%;
 }
 
+.slide3 {
+    background: url("../images/slide_bj3.jpg") no-repeat;
+    background-size: 100% 100%;
+}
 
+.slide3_1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: url("../images/slide3_1.png") no-repeat;
+    background-size: 100% 100%;
+}
 
+.slide3_2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: url("../images/slide3_2.png") no-repeat;
+    background-size: 100% 100%;
+}
 
+.slide3_3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: url("../images/slide3_3.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide4 {
+    background: url("../images/slide_bj4.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide4_1 {
+    position: absolute;
+    z-index: 2;
+    width: 1rem;
+    height: 1rem;
+    left: 2.2rem;
+    bottom: 3.8rem;
+    background: url("../images/slide4_1.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-animation: pulse 1s infinite linear;
+    -moz-animation: pulse 1s infinite linear;
+}
+
+.slide5 {
+    background: url("../images/slide_bj5.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide5_1 {
+    position: absolute;
+    z-index: 2;
+    width: 1rem;
+    height: 1rem;
+    left: 2.8rem;
+    bottom: 5.5rem;
+    background: url("../images/slide4_1.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-animation: pulse 1s infinite linear;
+    -moz-animation: pulse 1s infinite linear;
+}
+
+.slide6 {
+    background: url("../images/slide_bj3.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide6_1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: url("../images/slide6_1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide7 {
+    background: url("../images/slide_bj7.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide7_1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: url("../images/slide7_1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide8 {
+    background: url("../images/slide_bj8.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide8_1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: url("../images/slide8_1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide9 {
+    background: url("../images/slide_bj9.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide9_1 {
+    width: 3.26rem;
+    height: .82rem;
+    margin: auto;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 1.2rem;
+    position: absolute;
+    z-index: 3;
+    background: url("../images/slide9_1.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-animation: pulse 1s infinite linear;
+    -moz-animation: pulse 1s infinite linear;
+}
+
+.slide9_2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: url("../images/slide9_2.png") no-repeat;
+    background-size: 100% 100%;
+}
 
 @-webkit-keyframes rotateIn {
     0% {
@@ -125,5 +265,29 @@
     }
     100% {
         transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1)
+    }
+    50% {
+        -webkit-transform: scale(1.5)
+    }
+    100% {
+        -webkit-transform: scale(1)
+    }
+}
+
+@-moz-keyframes pulse {
+    0% {
+        -moz-transform: scale(1)
+    }
+    50% {
+        -moz-transform: scale(1.5)
+    }
+    100% {
+        -moz-transform: scale(1)
     }
 }

@@ -14,7 +14,7 @@
 
 <body>
 <div class="wrap">
-    <!--<audio src="images/m1.mp3" id="Jaudio" class="media-audio" autoplay preload loop="loop"></audio>-->
+    <audio src="images/m1.mp3" id="Jaudio" class="media-audio" autoplay preload loop="loop"></audio>
     <img class="m-toggle yinyu" src="images/sta.png" onclick="audioplay()">
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -44,14 +44,51 @@
                      swiper-animate-delay="0.6s">
                 </div>
             </div>
-            <div class="swiper-slide slide3"></div>
-            <div class="swiper-slide slide4"></div>
-            <div class="swiper-slide slide5"></div>
-            <div class="swiper-slide slide6"></div>
-            <div class="swiper-slide slide7"></div>
+            <div class="swiper-slide slide3">
+                <div class="ani slide3_1" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="0.3s">
+                </div>
+                <div class="ani slide3_2" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="0.3s">
+                </div>
+                <div class="ani slide3_3" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="0.6s">
+                </div>
+            </div>
+            <div class="swiper-slide slide4 swiper-no-swiping">
+                <div class="slide4_1"></div>
+            </div>
+            <div class="swiper-slide slide5 swiper-no-swiping">
+                <div class="slide5_1"></div>
+            </div>
+            <div class="swiper-slide slide6">
+                <div class="ani slide3_1" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="0.3s">
+                </div>
+                <div class="ani slide3_2" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="0.3s">
+                </div>
+                <div class="ani slide6_1" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="0.6s">
+                </div>
+            </div>
+            <div class="swiper-slide slide7">
+                <div class="ani slide7_1" swiper-animate-effect="tada" swiper-animate-duration="1s"
+                     swiper-animate-delay="0s">
+                </div>
+            </div>
+            <div class="swiper-slide slide8">
+                <div class="ani slide8_1" swiper-animate-effect="rollIn" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="0.3s">
+                </div>
+            </div>
+            <div class="swiper-slide slide9">
+                <a href="#" class="slide9_1"></a>
+                <div class="ani slide9_2" swiper-animate-effect="flipInY" swiper-animate-duration="1s"
+                     swiper-animate-delay="0.3s">
+                </div>
+            </div>
         </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
     </div>
 </div>
 <script src="js/jquery-2.1.0.js"></script>
@@ -66,21 +103,25 @@
         $('.swiper-container').css('height', hei);
 
         //音乐播放
-        //audioAutoPlay('Jaudio');
+        audioAutoPlay('Jaudio');
 
         //swiper
         var mySwiper = new Swiper('.swiper-container', {
             direction: 'vertical',
-            //loop: true,
-            // 如果需要分页器
-            pagination: '.swiper-pagination',
-            onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
-                swiperAnimateCache(swiper); //隐藏动画元素
-                swiperAnimate(swiper); //初始化完成开始动画
+            onInit: function (swiper) {
+                swiperAnimateCache(swiper);
+                swiperAnimate(swiper);
             },
             onSlideChangeEnd: function (swiper) {
-                swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                swiperAnimate(swiper);
             }
+        });
+        //下一页
+        $('.slide4_1').click(function () {
+            mySwiper.slideNext();
+        })
+        $('.slide5_1').click(function () {
+            mySwiper.slideNext();
         })
     };
     //自动播放函数
@@ -105,6 +146,7 @@
             $(".yinyu").attr("src", "images/sto.png");
         }
     }
+
 </script>
 </body>
 
