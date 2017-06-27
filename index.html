@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>一位亿万富翁的自白</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div class="wrap">
+    <!--<audio src="images/m1.mp3" id="Jaudio" class="media-audio" autoplay preload loop="loop"></audio>-->
+    <img class="m-toggle yinyu" src="images/sta.png" onclick="audioplay()">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <div class="slide1_1"></div>
+                <div class="ani slide1_2" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="0.3s">
+                </div>
+                <div class="ani slide1_3" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="0.9s">
+                </div>
+                <div class="ani slide1_4" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="1.2s">
+                </div>
+                <div class="ani slide1_5" swiper-animate-effect="flash" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="1.5s">
+                </div>
+                <div class="ani slide1_6" swiper-animate-effect="slideInDown" swiper-animate-duration="1s"
+                     swiper-animate-delay="1.5s">
+                </div>
+            </div>
+            <div class="swiper-slide slide2">
+                <div class="ani slide2_1" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="0.3s">
+                </div>
+                <div class="ani slide2_2" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="0.5s"
+                     swiper-animate-delay="0.6s">
+                </div>
+            </div>
+            <div class="swiper-slide slide3"></div>
+            <div class="swiper-slide slide4"></div>
+            <div class="swiper-slide slide5"></div>
+            <div class="swiper-slide slide6"></div>
+            <div class="swiper-slide slide7"></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<script src="js/jquery-2.1.0.js"></script>
+<script src="js/common.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<script>
+    window.onload = function () {
+        $("body").show();
+        //swiper高度设定
+        var hei = $(window).height();
+        $('.swiper-container').css('height', hei);
+
+        //音乐播放
+        //audioAutoPlay('Jaudio');
+
+        //swiper
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            //loop: true,
+            // 如果需要分页器
+            pagination: '.swiper-pagination',
+            onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
+                swiperAnimateCache(swiper); //隐藏动画元素
+                swiperAnimate(swiper); //初始化完成开始动画
+            },
+            onSlideChangeEnd: function (swiper) {
+                swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+            }
+        })
+    };
+    //自动播放函数
+    function audioAutoPlay(id) {
+        var audio = document.getElementById(id);
+        audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+        }, false);
+        document.addEventListener('YixinJSBridgeReady', function () {
+            audio.play();
+        }, false);
+    }
+    //音乐开关
+    function audioplay() {
+        var audio = document.getElementById("Jaudio");
+        if (audio.paused) {
+            audio.play();
+            $(".yinyu").attr("src", "images/sta.png");
+        } else {
+            audio.pause();
+            $(".yinyu").attr("src", "images/sto.png");
+        }
+    }
+</script>
+</body>
+
+</html>
