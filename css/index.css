@@ -81,6 +81,26 @@
     background-size: 100% 100%;
 }
 
+.slide1_7 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: url("../images/slide1_7.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide1_8 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: url("../images/slide1_8.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-animation: cao 2s infinite linear;
+    -moz-animation: cao 2s infinite linear;
+}
+
 .slide2 {
     background: url("../images/slide_bj2.jpg") no-repeat;
     background-size: 100% 100%;
@@ -135,7 +155,24 @@
     background: url("../images/slide3_3.png") no-repeat;
     background-size: 100% 100%;
 }
-
+.slide3_4 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: url("../images/slide3_4.png") no-repeat;
+    background-size: 100% 100%;
+}
+.slide3_5 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: url("../images/slide3_5.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-animation: cao 2s infinite linear;
+    -moz-animation: cao 2s infinite linear;
+}
 .slide4 {
     background: url("../images/slide_bj4.jpg") no-repeat;
     background-size: 100% 100%;
@@ -187,7 +224,7 @@
 }
 
 .slide7 {
-    background: url("../images/slide_bj7.jpg") no-repeat;
+    background: url("../images/slide_bj7.gif") no-repeat;
     background-size: 100% 100%;
 }
 
@@ -201,7 +238,7 @@
 }
 
 .slide8 {
-    background: url("../images/slide_bj8.jpg") no-repeat;
+    background: url("../images/slide_bj8.gif") no-repeat;
     background-size: 100% 100%;
 }
 
@@ -289,5 +326,30 @@
     }
     100% {
         -moz-transform: scale(1)
+    }
+}
+
+/*草动画*/
+@-webkit-keyframes cao {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-moz-keyframes cao {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
     }
 }
